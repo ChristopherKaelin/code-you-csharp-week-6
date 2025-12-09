@@ -1,0 +1,14 @@
+﻿// using System;
+
+
+Console.WriteLine("\n=====");
+
+int firstValue = 500;
+int secondValue = 600;
+int largerValue;
+
+largerValue = Math.Max(firstValue, secondValue);
+
+Console.WriteLine(largerValue);
+
+Console.WriteLine("\n=====");

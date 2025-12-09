@@ -1,0 +1,12 @@
+Console.WriteLine("\n=====");
+
+Random dice = new Random();
+int roll1 = dice.Next(21);
+int roll2 = dice.Next(21);
+int roll3 = dice.Next(21);
+
+Console.WriteLine($"First D20 roll: {roll1}");
+Console.WriteLine($"Second D20 roll: {roll2}");
+Console.WriteLine($"Third D20 roll: {roll3}");
+
+Console.WriteLine("\n=====");
