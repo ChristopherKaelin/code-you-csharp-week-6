@@ -1,0 +1,27 @@
+// using System;
+void SayHello(string Entity) {
+    Console.WriteLine($"Hello {Entity}");
+}
+int[] a = {1,2,3,4,5};
+
+
+Console.WriteLine("\n=====");
+
+Console.WriteLine("Before calling a method");
+SayHello("World!");
+SayHello("Christopher");
+Console.WriteLine("After calling a method");
+
+Console.WriteLine("Contents of Array:");
+PrintArray();
+
+void PrintArray()
+{
+    foreach (int x in a)
+    {
+        Console.Write($"{x} ");
+    }
+    Console.WriteLine();
+}
+
+Console.WriteLine("\n=====");

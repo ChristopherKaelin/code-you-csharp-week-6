@@ -1,0 +1,23 @@
+//  Create a method to display random numbers
+//  ====================
+
+void DisplayRandomNumbers()
+{
+    Random random = new Random();
+
+    for (int i = 0; i < 10; i++)
+    {
+        Console.Write($"{random.Next(1, 100)}, ");
+    }
+
+    Console.WriteLine();
+}
+
+
+Console.WriteLine("\n=====");
+
+Console.WriteLine("Generating random numbers:");
+DisplayRandomNumbers();
+
+
+Console.WriteLine("\n=====");
