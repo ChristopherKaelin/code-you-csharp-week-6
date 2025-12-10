@@ -1,0 +1,19 @@
+using System;
+Console.WriteLine("\n====================\n");
+
+string[] wordList = {"racecar" ,"talented", "deified", "tent", "tenet"};
+string reversed;
+
+foreach (string word in wordList ){
+    Console.WriteLine($"{word} is {(IsPalindrome(word) ? "" : "NOT ")}a palindrome");
+}
+
+bool IsPalindrome(string word) {
+    reversed = "";
+    for (int i = word.Length - 1; i >= 0; i--) {
+        reversed += word[i];
+    }
+    return (reversed == word);
+}
+
+Console.WriteLine("\n====================");

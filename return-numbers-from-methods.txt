@@ -1,0 +1,20 @@
+using System;
+Console.WriteLine("\n====================\n");
+
+double usd = 23.73;
+double vnd = 20251220;
+double usdToVndRate = 23500;
+
+Console.WriteLine($"${usd} USD = ₫{UsdToVnd(usd)} VND");
+Console.WriteLine($"₫{vnd} VND = ${VndToUsd(vnd)} USD");
+
+int UsdToVnd(double usd){
+    return (int) (usd * usdToVndRate);
+}
+
+double VndToUsd(double usd){
+    return  (vnd / usdToVndRate);
+}
+
+
+Console.WriteLine("\n====================");

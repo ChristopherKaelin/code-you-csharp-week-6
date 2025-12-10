@@ -1,0 +1,46 @@
+using System;
+Console.WriteLine("\n====================\n");
+
+Random random = new Random();
+
+Console.Write("Would you like to play? (y/N):  ");
+
+if (ShouldPlay()) {
+    PlayGame();
+}
+
+void PlayGame() {
+    var play = true;
+
+    while (play) {
+        var target = GetTarget();
+        var roll = RollDice();
+
+        Console.WriteLine($"Roll a number greater than {target} to win!");
+        Console.WriteLine($"You rolled a {roll}");
+        Console.WriteLine(WinOrLose(roll, target));
+
+        Console.Write("\nPlay again? (y/N):  ");
+        play = ShouldPlay();
+    }
+}
+
+int GetTarget() {
+    return random.Next(1, 6);
+}
+
+int RollDice() {
+    return random.Next(1, 7);
+}
+
+bool ShouldPlay() {
+    string userChoice = Console.ReadLine();
+    // return response.ToLower().Equals("y");
+    return (userChoice.ToUpper() != "N");
+}
+
+string WinOrLose(int roll, int target) {
+    return (roll > target) ? "You Won!!!!" : "You lose!";
+}
+
+Console.WriteLine("\n====================");
